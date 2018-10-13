@@ -1692,7 +1692,7 @@ if database:sismember(hash, result.sender_user_id_) then
 tsX000("prore",msg,"العضو مرفوع منشئ في البوت")
 else
 database:sadd(hash, result.sender_user_id_)
-tsX000("prore",msg,"💢┇تم ترقيه العضو ليصبح منشئ في")
+tsX000("prore",msg,"🔲 تـم ترقـيته وأصبح منـشئٰ في المجموعة ✔️")
 end
 end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,setcreator_by_reply)
@@ -1702,7 +1702,7 @@ local apow = {string.match(text, "^(رفع منشئ) @(.*)$")}
 function setcreator_by_username(extra, result, success)
 if result.id_ then
 database:sadd('RAMBO:'..bot_id..'creator:'..msg.chat_id_, result.id_)
-texts = '💢┇العضو ⌁≻ ['..result.title_..'](t.me/'..(apow[2] or 'TH3VICTORY')..')\n☑┇تم رفعه منشئ في البوت'
+texts = '🔳 العـضو 💳  ⌁≻ ['..result.title_..'](t.me/'..(apow[2] or 'TH3VICTORY')..')\n🔲 تـم ترقـيته وأصبح منـشئٰ في المجموعة ✔️'
 else
 texts = '✖┇العضو ليس بالمجموعه او اليوزر خطاء'
 end
@@ -1713,7 +1713,7 @@ end
 if text:match("^رفع منشئ (%d+)$") then
 local apow = {string.match(text, "^(رفع منشئ) (%d+)$")}
 database:sadd('RAMBO:'..bot_id..'creator:'..msg.chat_id_, apow[2])
-tsX000(apow[2],msg,"💢️┇تم ترقيه العضو ليصبح منشئ في البوت")
+tsX000(apow[2],msg,"🔲 تـم ترقـيته وأصبح منـشئٰ في المجموعة ✔️")
 end
 if text:match("^تنزيل منشئ$") and msg.reply_to_message_id_ then
 function decreator_by_reply(extra, result, success)
