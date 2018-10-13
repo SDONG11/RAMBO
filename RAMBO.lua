@@ -1702,7 +1702,7 @@ local apow = {string.match(text, "^(رفع منشئ) @(.*)$")}
 function setcreator_by_username(extra, result, success)
 if result.id_ then
 database:sadd('RAMBO:'..bot_id..'creator:'..msg.chat_id_, result.id_)
-texts = '💢┇العضو ⌁≻ ['..result.title_..'](t.me/'..(apow[2] or 'TH3VICTORY')..')\n☑┇تم رفعه منشئ في البوت'
+texts = '🔳 العـضو 💳  ⌁≻ ['..result.title_..'](t.me/'..(apow[2] or 'TH3VICTORY')..')\n🔲 تـم ترقـيته وأصبح منـشئٰ في المجموعة ✔️'
 else
 texts = '✖┇العضو ليس بالمجموعه او اليوزر خطاء'
 end
