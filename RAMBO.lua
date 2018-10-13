@@ -1689,10 +1689,10 @@ if text == "رفع منشئ" and msg.reply_to_message_id_ then
 function setcreator_by_reply(extra, result, success)
 local hash =  'RAMBO:'..bot_id..'creator:'..msg.chat_id_
 if database:sismember(hash, result.sender_user_id_) then
-tsX000("prore",msg,"العضو مرفوع منشئ في البوت")
+tsX000("prore",msg,"🔲 بلفعل تـم ترقـيته ليصبح منـشئٰ في المجموعة ✔️")
 else
 database:sadd(hash, result.sender_user_id_)
-tsX000("prore",msg,"💢┇تم ترقيه العضو ليصبح منشئ في")
+tsX000("prore",msg,"🔲 تـم ترقـيته وأصبح منـشئٰ في المجموعة ✔️")
 end
 end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,setcreator_by_reply)
@@ -1713,7 +1713,7 @@ end
 if text:match("^رفع منشئ (%d+)$") then
 local apow = {string.match(text, "^(رفع منشئ) (%d+)$")}
 database:sadd('RAMBO:'..bot_id..'creator:'..msg.chat_id_, apow[2])
-tsX000(apow[2],msg,"💢️┇تم ترقيه العضو ليصبح منشئ في البوت")
+tsX000(apow[2],msg,"🔲 تـم ترقـيته وأصبح منـشئٰ في المجموعة ✔️")
 end
 if text:match("^تنزيل منشئ$") and msg.reply_to_message_id_ then
 function decreator_by_reply(extra, result, success)
