@@ -5079,6 +5079,10 @@ if (data.ID == "UpdateNewMessage") then
 local Data_RAMBO = data
 msg = data.message_
 text = msg.content_.text_
+if not is_in_ch(msg.sender_user_id_) and is_sudo(msg) then
+	send(msg.chat_id_, 0, 1, 'يجب عليك الاشتراك في قناة المطور\n\nCH : @'..sudo_ch, 1, 'md')
+	return 
+end
 if database:get('RAMBO:'..bot_id.."charge:"..msg.chat_id_) then
 if (not is_mod(msg) and not is_vip(msg)) then 
 print("»» is member "..msg.sender_user_id_) 
