@@ -40,6 +40,19 @@ io.popen("mkdir files_RAMBO")
 os.execute('cd .. &&  rm -rf .telegram-cli')
 os.execute('cd .. &&  rm -fr .telegram-cli')
 --         »»                 Start Functions                         ««              --
+--         »»                 is_in_ch                         ««              --
+function is_in_ch(user_id)
+  local var = false
+  local url = 'https://api.telegram.org/bot'..token..'/getchatmember?chat_id='..sudo_ch..'&user_id='..user_id
+  if force == 'true' then
+    local req = https.request(url)
+    local data = JSON:decode(req)
+    if data.ok == true
+      var = true
+    end
+  end
+  return var
+end
 --         »»                 is_sudo                         ««              --
 function is_sudo(msg)
 local var = false
