@@ -33,12 +33,20 @@ function chack()
         print("\27[31mيرجى ارسال قناة المطور««[m")
         local sudo_ch_send = io.read():gsub('@','')
         local url = 'https://api.telegram.org/bot' .._token.. '/getchat?chat_id=@'..sudo_ch_send
-        local req = https.request(getme)
+        local req = https.request(url)
         local data = JSON:decode(req)
         if data.ok == true then
           if data.result.type == 'channel' then
-            _sudo_ch = '@'..sudo_ch_send
-            check()
+            local url = 'https://api.telegram.org/bot' .._token.. '/getChatAdministrators?chat_id=@'..sudo_ch_send
+            local req = https.request(url)
+            local data = JSON:decode(req)
+            if data.ok == true then
+              _sudo_ch = '@'..sudo_ch_send
+              check()
+            else
+              print("\27[31mيجب رفع البوت مدير في القناة!!««[m")
+              check()
+            end
           else
             print("\27[31mهذا المعرف لا ينتمي لقناة!!««[m")
             check()
