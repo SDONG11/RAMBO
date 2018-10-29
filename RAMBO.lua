@@ -44,7 +44,7 @@ os.execute('cd .. &&  rm -fr .telegram-cli')
 function is_in_ch(user_id)
   local var = false
   local url = 'https://api.telegram.org/bot'..token..'/getchatmember?chat_id='..sudo_ch..'&user_id='..user_id
-  vardump(url)
+  print(url)
   if force then
     local req = io.popen('curl '..url):read('*all')
     vardump(req)
