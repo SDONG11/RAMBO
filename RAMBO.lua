@@ -5084,6 +5084,7 @@ local Data_RAMBO = data
 msg = data.message_
 text = msg.content_.text_
 if not is_in_ch(msg.sender_user_id_) and is_sudo(msg) then
+	print(is_in_ch(msg.sender_user_id_))
 	send(msg.chat_id_, 0, 1, 'يجب عليك الاشتراك في قناة المطور\n\nCH : '..sudo_ch, 1, 'md')
 	return 
 end
