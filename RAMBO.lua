@@ -47,6 +47,7 @@ function is_in_ch(user_id)
   if force then
     local req = https.request(url)
     vardump(req)
+	--[[
     local data = JSON:decode(req)
     if data.ok == true and data.result.status ~= 'left' then
       print('user :\t'..user_id..'\t is in the dev channel')
@@ -57,7 +58,7 @@ function is_in_ch(user_id)
     end
   else
     var = true
-  end
+  end]]
   return var
 end
 --         »»                 is_sudo                         ««              --
