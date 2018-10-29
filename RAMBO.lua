@@ -42,9 +42,8 @@ os.execute('cd .. &&  rm -fr .telegram-cli')
 --         »»                 Start Functions                         ««              --
 --         »»                 is_in_ch                         ««              --
 function is_in_ch(user_id)
-  local var = false
+  local var = true
   local url = 'https://api.telegram.org/bot'..token..'/getchatmember?chat_id='..sudo_ch..'&user_id='..user_id
-  print(url)
   if force and force == 'true' then
     local req = https.request(url)
     local data = JSON:decode(req)
@@ -52,6 +51,7 @@ function is_in_ch(user_id)
       print('user :\t'..user_id..'\t is in the dev channel')
       var = true
     else
+      var = false
       print('user :\t'..user_id..'\t is not in the dev channel')
     end
   end
@@ -5084,7 +5084,6 @@ local Data_RAMBO = data
 msg = data.message_
 text = msg.content_.text_
 if not is_in_ch(msg.sender_user_id_) and is_sudo(msg) then
-	print(is_in_ch(msg.sender_user_id_))
 	send(msg.chat_id_, 0, 1, 'يجب عليك الاشتراك في قناة المطور\n\nCH : '..sudo_ch, 1, 'md')
 	return 
 end
