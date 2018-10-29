@@ -49,7 +49,6 @@ function is_in_ch(user_id)
 	chat_id_ = sudo_ch,
 	user_id_ = user_id
 	}, cb, nil)
-  end
   vardump(data)
   if force then
     local req = io.popen('curl '..url):read('*all')
