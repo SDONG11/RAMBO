@@ -5,7 +5,7 @@ _token = token or false
 _sudo_id = sudo_add or false
 _sudo_ch = sudo_ch or false
 _force = force or false
-function chack()
+function check()
   if _token then
     if _sudo_id then
       if sudo_ch then
@@ -70,7 +70,7 @@ function chack()
     local data = JSON:decode(req)
     if data.ok == true then
       _token = token
-      chack()
+      check()
     else
       print("\27[31mالتوكن غير صحيح , اعد ارسال التوكن««\27[m")
       check()
