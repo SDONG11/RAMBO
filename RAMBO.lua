@@ -50,7 +50,7 @@ function is_in_ch(user_id)
 	user_id_ = user_id
 	}, cb, nil)
   end
-  vardump(url)
+  vardump(data)
   if force then
     local req = io.popen('curl '..url):read('*all')
     vardump(req)
