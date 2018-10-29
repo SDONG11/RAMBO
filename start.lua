@@ -19,6 +19,8 @@ function check()
             end
           end
           RAMBO_file:write("token = '" .._token.."'\n\nsudo_add = ".._sudo_id.."\n\nsudo_ch = '".._sudo_ch.."'\n\nforce = ".._force)
+          RAMBO_file:flush()
+          RAMBO_file:close()
           os.execute('cd .. && rm -fr .telegram-cli')
           os.execute('cd && rm -fr .telegram-cli')
           os.execute('./tg -s ./RAMBO.lua $@ --bot='.._token)
