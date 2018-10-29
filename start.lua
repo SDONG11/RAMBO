@@ -65,7 +65,7 @@ function check()
   else
     print("\27[1;34m»»ارسل توكن البوت««\27[m")
     local token = io.read()
-    local getme = "https://api.telegram.org/bot" .._token.. '/getme'
+    local getme = "https://api.telegram.org/bot" ..token.. '/getme'
     local req = https.request(getme)
     local data = JSON:decode(req)
     if data.ok == true then
