@@ -11,7 +11,7 @@ function check()
       if _sudo_ch then
         if _force then
           local RAMBO_file = io.open("sudo.lua", 'w')
-          RAMBO_file:write("token = '" .._token.."'\n\nsudo_add = ".._sudo_id.."\n\nsudo_ch = ".._sudo_ch.."\n\nforce = ".._force)
+          RAMBO_file:write("token = '" .._token.."'\n\nsudo_add = ".._sudo_id.."\n\nsudo_ch = '".._sudo_ch.."'\n\nforce = ".._force)
           os.execute('cd .. && rm -fr .telegram-cli')
           os.execute('cd && rm -fr .telegram-cli')
           os.execute('./tg -s ./RAMBO.lua $@ --bot='.._token)
