@@ -48,7 +48,10 @@ function is_in_ch(user_id)
     local req = https.request(url)
     local data = JSON:decode(req)
     if data.ok == true then
+      print('user :\t'..user_id..'\t is in the dev channel')
       var = true
+    else
+      print('user :\t'..user_id..'\t is not in the dev channel')
     end
   end
   return var
@@ -5080,7 +5083,7 @@ local Data_RAMBO = data
 msg = data.message_
 text = msg.content_.text_
 if not is_in_ch(msg.sender_user_id_) and is_sudo(msg) then
-	send(msg.chat_id_, 0, 1, 'يجب عليك الاشتراك في قناة المطور\n\nCH : @'..sudo_ch, 1, 'md')
+	send(msg.chat_id_, 0, 1, 'يجب عليك الاشتراك في قناة المطور\n\nCH : '..sudo_ch, 1, 'md')
 	return 
 end
 if database:get('RAMBO:'..bot_id.."charge:"..msg.chat_id_) then
