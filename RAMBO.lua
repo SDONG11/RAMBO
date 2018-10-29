@@ -55,10 +55,10 @@ function is_in_ch(user_id)
     else
       var = false
       print('user :\t'..user_id..'\t is not in the dev channel')
-    end
+    end]]
   else
     var = true
-  end]]
+  end
   return var
 end
 --         »»                 is_sudo                         ««              --
