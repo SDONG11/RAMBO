@@ -45,9 +45,7 @@ function is_in_ch(user_id)
   local var = false
   local url = 'https://api.telegram.org/bot'..token..'/getchatmember?chat_id='..sudo_ch..'&user_id='..user_id
   if force then
-    local req = https.request(url)
-    vardump(req)
-	--[[
+    local req = io.popen('curl '..url):read('*all')
     local data = JSON:decode(req)
     if data.ok == true and data.result.status ~= 'left' then
       print('user :\t'..user_id..'\t is in the dev channel')
@@ -55,7 +53,7 @@ function is_in_ch(user_id)
     else
       var = false
       print('user :\t'..user_id..'\t is not in the dev channel')
-    end]]
+    end
   else
     var = true
   end
