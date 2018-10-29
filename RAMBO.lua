@@ -21,7 +21,7 @@ redis = (loadfile "./libs/redis.lua")()
 database = Redis.connect('127.0.0.1', 6379)
 notify = lgi.require('Notify')
 notify.init ("Telegram updates")
-sudos = dofile('sudo.lua')
+dofile('sudo.lua')
 chats = {}
 day = 86400
 bot_idkeko = {string.match(token, "^(%d+)(:)(.*)")}
