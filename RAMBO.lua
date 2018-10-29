@@ -42,7 +42,7 @@ os.execute('cd .. &&  rm -fr .telegram-cli')
 --         »»                 Start Functions                         ««              --
 --         »»                 is_in_ch                         ««              --
 function is_in_ch(user_id)
-  local var = true
+  local var = false
   local url = 'https://api.telegram.org/bot'..token..'/getchatmember?chat_id='..sudo_ch..'&user_id='..user_id
   if force and force == 'true' then
     local req = https.request(url)
@@ -54,6 +54,8 @@ function is_in_ch(user_id)
       var = false
       print('user :\t'..user_id..'\t is not in the dev channel')
     end
+  elseif force and force == 'false' then
+    var = true
   end
   return var
 end
