@@ -4213,9 +4213,9 @@ end
 ----------------------------------------------------------------------------------------------
 if text:match('^مسح (%d+)$') and is_owner(msg) then
 local matches = {string.match(text, "^(مسح) (%d+)$")}
-if msg.chat_id_:match("^-100") then
-if tonumber(matches[2]) > 100 or tonumber(matches[2]) < 1 then
-pm = '💢┇لا تستطيع مسح اكثر من 100 رساله'
+if msg.chat_id_:match("^-300") then
+if tonumber(matches[2]) > 300 or tonumber(matches[2]) < 1 then
+pm = '💢┇لا تستطيع مسح اكثر من 300 رساله'
 send(msg.chat_id_, msg.id_, 1, pm, 1, 'html')
 else
 tdcli_function ({
