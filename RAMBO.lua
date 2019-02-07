@@ -4831,7 +4831,6 @@ local text =  [[
 👨‍🔧|℡ 《 قفل •⊱ فتح 》 التكرار
 👨‍🔧|℡ 《 قفل •⊱ فتح 》 الكلايش
 ﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎
-📡 |℡ Ch •⊱ @TH3VICTORY
 ]]
 send(msg.chat_id_, msg.id_, 1, (h1 or text), 1, 'html')
 end
@@ -5006,7 +5005,6 @@ local text =  [[
 🔰|℡ 《 الملفات 》 ⇣
 🔰|℡ 《 مسح الملفات 》 ⇣
 ﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎
-
 ]]
 send(msg.chat_id_, msg.id_, 1, (h4 or text), 1, 'html')
 end
