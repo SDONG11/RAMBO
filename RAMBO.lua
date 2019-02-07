@@ -4781,7 +4781,6 @@ local text =  [[
 🔰|℡⁽م4₎⇣ ~ اوامـر المبـرمجين•⊱ 👨‍🔧
 
 ֆ • • • • • • • • • • • • • • • • • • • • •  ֆ
-📡 ┇Ch » @TH3VICTORY
 ]]
 send(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -4893,7 +4892,6 @@ local text =  [[
 🕳|℡ 《 مسح الصوره 》 ⇣
 🕳|℡ 《 مسح الرابط 》 ⇣
 ﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎
-📡 |℡ Ch •⊱ @TH3VICTORY
 ]]
 send(msg.chat_id_, msg.id_, 1, (h2 or text), 1, 'html')
 end
@@ -4942,7 +4940,6 @@ local text =  [[
 🔘|℡ 《 مسح + عدد 》 لمسح الرسائل
 🔘|℡ 《 ردود الاداري 》 لعرض الردود المضافه
 ﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎
-📡 |℡ Ch •⊱ @TH3VICTORY
 ]]
 send(msg.chat_id_, msg.id_, 1, (h3 or text), 1, 'html')
 end
@@ -5009,7 +5006,6 @@ local text =  [[
 🔰|℡ 《 الملفات 》 ⇣
 🔰|℡ 《 مسح الملفات 》 ⇣
 ﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎﹎
-📡 |℡ Ch •⊱ @TH3VICTORY
 
 ]]
 send(msg.chat_id_, msg.id_, 1, (h4 or text), 1, 'html')
